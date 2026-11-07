@@ -116,20 +116,20 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 4 rem 1.5 rem;
+  padding: 4rem 1.5rem;
   background: url('https://images.unsplash.com/photo-1607006482602-765180037159?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient (135 deg, rgba (44, 37, 35, 0.68), rgba (140, 109, 70, 0.48));
+  background: linear-gradient(135deg, rgba(44, 37, 35, 0.68), rgba(140, 109, 70, 0.48));
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800 px;
+  max-width: 800px;
   color: #ffffff;
 }
 
@@ -150,19 +150,19 @@ body {
 
 .btn-hero {
   display: inline-block;
-  padding: 0.9 rem 2.2 rem;
-  background: var (--primary-color);
+  padding: 0.9rem 2.2rem;
+  background: var(--primary-color);
   color: #ffffff;
   text-decoration: none;
   font-weight: 500;
-  border-radius: 50 px;
-  box-shadow: 0 4 px 15 px rgba (0,0,0,0.2);
-  transition: all 0.3 s ease;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
 }
 
 .btn-hero:hover {
-  background: var (--primary-dark);
-  transform: translateY (-2 px);
+  background: var(--primary-dark);
+  transform: translateY(-2px);
 }
 
 /* ==========================================
@@ -260,16 +260,16 @@ body {
 
 .weight-badge {
   position: absolute;
-  top: 12 px;
-  right: 12 px;
-  background: rgba (255, 255, 255, 0.92);
-  backdrop-filter: blur (4 px);
-  color: var (--primary-dark);
-  font-size: 0.75 rem;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  color: var(--primary-dark);
+  font-size: 0.75rem;
   font-weight: 600;
-  padding: 4 px 10 px;
-  border-radius: 20 px;
-  box-shadow: 0 2 px 6 px rgba (0,0,0,0.08);
+  padding: 4px 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .product-info {
@@ -300,12 +300,12 @@ body {
 }
 
 .price-box {
-  font-size: 1.1 rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  color: var (--primary-color);
-  background: rgba (140, 109, 70, 0.08);
-  padding: 4 px 10 px;
-  border-radius: 8 px;
+  color: var(--primary-color);
+  background: rgba(140, 109, 70, 0.08);
+  padding: 4px 10px;
+  border-radius: 8px;
 }
 
 .btn-card-flip {
@@ -325,7 +325,7 @@ body {
 
 /* --- CARA TRASERA CON IMAGEN OSCURECIDA --- */
 .card-back {
-  transform: rotateY (180 deg);
+  transform: rotateY(180deg);
   position: relative;
   background-color: #120e0c;
   color: #ffffff;
@@ -348,8 +348,8 @@ body {
   inset: 0;
   z-index: 2;
   background: rgba(15, 11, 9, 0.85); /* Sombra oscura protectora */
-  backdrop-filter: blur (2 px);
-  padding: 1.5 rem;
+  backdrop-filter: blur(2px);
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -357,25 +357,25 @@ body {
 
 .weight-badge-back {
   align-self: flex-end;
-  background: rgba (255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
-  font-size: 0.75 rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  padding: 4 px 10 px;
-  border-radius: 20 px;
+  padding: 4px 10px;
+  border-radius: 20px;
 }
 
 .card-back h3 {
-  font-family: var (--font-heading);
-  font-size: 1.3 rem;
-  color: var (--accent-gold);
-  margin-top: 0.2 rem;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--accent-gold);
+  margin-top: 0.2rem;
 }
 
 .details-content p {
-  font-size: 0.85 rem;
+  font-size: 0.85rem;
   line-height: 1.45;
-  margin-bottom: 0.8 rem;
+  margin-bottom: 0.8rem;
   color: #f0e8e0;
 }
 
@@ -386,11 +386,11 @@ body {
 .back-footer {
   display: flex;
   flex-direction: column;
-  gap: 10 px;
+  gap: 10px;
 }
 
 .price-box-back {
-  font-size: 1.2 rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #ffffff;
   text-align: center;
@@ -400,18 +400,18 @@ body {
   display: block;
   text-align: center;
   text-decoration: none;
-  background-color: var (--wa-green);
+  background-color: var(--wa-green);
   color: #ffffff;
-  font-size: 0.88 rem;
+  font-size: 0.88rem;
   font-weight: 600;
-  padding: 10 px 12 px;
-  border-radius: 8 px;
-  box-shadow: 0 4 px 12 px rgba (37, 211, 102, 0.3);
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
   transition: background-color 0.3s ease;
 }
 
 .btn-wa-order:hover {
-  background-color: var (--wa-green-hover);
+  background-color: var(--wa-green-hover);
 }
 
 /* ==========================================
@@ -419,28 +419,28 @@ body {
    ========================================== */
 .whatsapp-btn {
   position: fixed;
-  bottom: 25 px;
-  right: 25 px;
-  width: 60 px;
-  height: 60 px;
-  background-color: var (--wa-green);
-  border-radius: 50 %;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--wa-green);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4 px 18 px rgba (37, 211, 102, 0.4);
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.4);
   z-index: 1000;
-  transition: transform 0.3 s ease, background-color 0.3 s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .whatsapp-btn:hover {
-  transform: scale (1.1);
-  background-color: var (--wa-green-hover);
+  transform: scale(1.1);
+  background-color: var(--wa-green-hover);
 }
 
 .whatsapp-icon {
-  width: 32 px;
-  height: 32 px;
+  width: 32px;
+  height: 32px;
   fill: #ffffff;
 }
 
@@ -449,37 +449,37 @@ body {
    ========================================== */
 .site-footer {
   flex-shrink: 0;
-  width: 100 %;
-  background-color: var (--primary-dark);
+  width: 100%;
+  background-color: var(--primary-dark);
   color: #ffffff;
-  padding: 2 rem 1.5 rem 2 rem;
+  padding: 2rem 1.5rem 2rem;
   text-align: center;
   margin-top: auto;
 }
 
 .footer-content {
-  max-width: 1200 px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .motivational-quote {
-  font-family: var (--font-heading);
+  font-family: var(--font-heading);
   font-style: italic;
-  font-size: 1.25 rem;
+  font-size: 1.25rem;
   line-height: 1.6;
-  color: var (--bg-cream);
-  margin-bottom: 2 rem;
+  color: var(--bg-cream);
+  margin-bottom: 2rem;
 }
 
 .footer-copy {
-  font-size: 0.82 rem;
-  color: rgba (255, 255, 255, 0.6);
-  border-top: 1 px solid rgba (255, 255, 255, 0.1);
-  padding-top: 1.5 rem;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
 }
 
 /* RESPONSIVE */
-@ media (max-width: 600px) {
+@media (max-width: 600px) {
   .nav-links {
     display: none;
   }
