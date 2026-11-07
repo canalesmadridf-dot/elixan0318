@@ -1,0 +1,486 @@
+/* ==========================================
+   RESET & CONFIGURACIÓN GLOBAL DE MAQUETACIÓN
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #8c6d46;
+  --primary-dark: #5c4033;
+  --accent-gold: #d4af37;
+  --bg-cream: #faf7f2;
+  --card-bg: #ffffff;
+  --text-dark: #2c2523;
+  --text-muted: #6e655f;
+  --wa-green: #25d366;
+  --wa-green-hover: #1ebd56;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 15px 35px rgba(140, 109, 70, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==========================================
+   NAGAVEGACIÓN & LOGO ADAPTABLE
+   ========================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 5%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(140, 109, 70, 0.12);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Rectángulo de logo flexible y adaptable */
+.logo-box {
+  width: 52px;
+  height: 52px;
+  border: 2px dashed var(--primary-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 3px;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Se adapta a cualquier formato de logo sin deformarse */
+  object-position: center;
+}
+
+.brand-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: var(--primary-dark);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* ==========================================
+   PORTADA PRINCIPAL (HERO)
+   ========================================== */
+.hero {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1.5rem;
+  background: url('https://images.unsplash.com/photo-1607006482602-765180037159?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(44, 37, 35, 0.68), rgba(140, 109, 70, 0.48));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  color: #ffffff;
+}
+
+.hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 300;
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  background: var(--primary-color);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   CATÁLOGO & EFECTO GIRO 180° EN TARJETAS
+   ========================================== */
+.catalog-container {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-title h2 {
+  font-family: var(--font-heading);
+  font-size: 2.3rem;
+  color: var(--primary-dark);
+}
+
+.title-underline {
+  width: 70px;
+  height: 3px;
+  background: var(--accent-gold);
+  margin: 0.8rem auto 0;
+  border-radius: 2px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 2.2rem;
+}
+
+/* Tarjeta 3D Perspectiva */
+.product-card {
+  background-color: transparent;
+  height: 460px;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+/* GIRO EN HOVER (Gira 180 grados y regresa al retirar el cursor) */
+.product-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Caras Frontal y Trasera */
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(140, 109, 70, 0.1);
+}
+
+/* --- CARA FRONTAL --- */
+.card-front {
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background-color: #f2efe9;
+  overflow: hidden;
+}
+
+/* Imagen Frontal Centrada */
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.weight-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  color: var(--primary-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.product-info {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+  margin-bottom: 0.4rem;
+}
+
+.product-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-box {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  background: rgba(140, 109, 70, 0.08);
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+.btn-card-flip {
+  cursor: pointer;
+  background-color: var(--primary-dark);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn-card-flip:hover {
+  background-color: var(--primary-color);
+}
+
+/* --- CARA TRASERA CON IMAGEN OSCURECIDA --- */
+.card-back {
+  transform: rotateY(180deg);
+  position: relative;
+  background-color: #120e0c;
+  color: #ffffff;
+}
+
+/* Imagen de fondo trasera centrada */
+.card-back-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+/* Capa oscurecida para resaltar el texto */
+.card-back-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: rgba(15, 11, 9, 0.85); /* Sombra oscura protectora */
+  backdrop-filter: blur(2px);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.weight-badge-back {
+  align-self: flex-end;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.card-back h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--accent-gold);
+  margin-top: 0.2rem;
+}
+
+.details-content p {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  margin-bottom: 0.8rem;
+  color: #f0e8e0;
+}
+
+.details-content strong {
+  color: #ffffff;
+}
+
+.back-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.price-box-back {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+
+.btn-wa-order {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--wa-green);
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.btn-wa-order:hover {
+  background-color: var(--wa-green-hover);
+}
+
+/* ==========================================
+   BOTÓN FLOTANTE WHATSAPP
+   ========================================== */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--wa-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.4);
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  background-color: var(--wa-green-hover);
+}
+
+.whatsapp-icon {
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+}
+
+/* ==========================================
+   PIE DE PÁGINA (CORREGIDO AL FINAL DEL LAYOUT)
+   ========================================== */
+.site-footer {
+  flex-shrink: 0;
+  width: 100%;
+  background-color: var(--primary-dark);
+  color: #ffffff;
+  padding: 2rem 1.5rem 2rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.motivational-quote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--bg-cream);
+  margin-bottom: 2rem;
+}
+
+.footer-copy {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+}
