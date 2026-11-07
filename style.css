@@ -260,16 +260,16 @@ body {
 
 .weight-badge {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(4px);
-  color: var(--primary-dark);
-  font-size: 0.75rem;
+  top: 12 px;
+  right: 12 px;
+  background: rgba (255, 255, 255, 0.92);
+  backdrop-filter: blur (4 px);
+  color: var (--primary-dark);
+  font-size: 0.75 rem;
   font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 4 px 10 px;
+  border-radius: 20 px;
+  box-shadow: 0 2 px 6 px rgba (0,0,0,0.08);
 }
 
 .product-info {
@@ -300,12 +300,12 @@ body {
 }
 
 .price-box {
-  font-size: 1.1rem;
+  font-size: 1.1 rem;
   font-weight: 600;
-  color: var(--primary-color);
-  background: rgba(140, 109, 70, 0.08);
-  padding: 4px 10px;
-  border-radius: 8px;
+  color: var (--primary-color);
+  background: rgba (140, 109, 70, 0.08);
+  padding: 4 px 10 px;
+  border-radius: 8 px;
 }
 
 .btn-card-flip {
@@ -325,7 +325,7 @@ body {
 
 /* --- CARA TRASERA CON IMAGEN OSCURECIDA --- */
 .card-back {
-  transform: rotateY(180deg);
+  transform: rotateY (180 deg);
   position: relative;
   background-color: #120e0c;
   color: #ffffff;
